@@ -1,0 +1,36 @@
+p
+{
+	text-indent: 20px;
+}
+*::selection{
+	background-color: gray;
+	color: white;
+}
+#dem1,#dem2,#dem3
+{
+    height: 100px;
+    align-content: center;
+}
+.card
+{
+    background-color: #f1f2a2;
+}
+body
+{
+    
+    margin-bottom: 20px;
+}
+.dropdown-item:hover
+{
+    background-color: black;
+}
+
+/*.nav
+{
+    background-color: lightgreen;
+    color: darkgreen;
+}
+.nav-item:hover{
+    background-color: lightgreen;
+    color: white;
+}*/

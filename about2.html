@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+	<link href="style.css" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+
+</head>
+<body>
+	<br>
+	<div class="container">
+		
+			<div class="row">
+				<div class="col-md-9">
+					<h3>Unique Disability ID</h3>
+					<h5>Department of Empowerment of persons with Disabilities,<br>
+Ministry of Social Justice and Empowerment, Govt. of India</h5>
+</div>
+<div class="col-md-3">
+
+
+	<img src="1.png" class="img-fluid">
+</div>
+</div>
+</div>
+	<div class="container-fluid" style="border:2px solid green;background-color:#db9a2a;margin-top: 10px;height: 50px;">
+	<marquee><h2 ><font color="#190c2b" >Schemes for Persons with Disabilities</font></h2></marquee>
+</div>
+<div class="container bg-dark" style="background-color: #37e697;">
+	
+			<ul class="nav justify-content-between" style="margin-top:10px">
+				<li class="nav-item"><a href="schemes.html" class="nav-link text-light active">Home</a></li>
+				<!-- <li class="nav-item"><a href="#" class="nav-link">About Us</a></li> -->
+				  <li class="nav-item"> <a href="#" class="nav-link text-light dropdown-toggle" data-toggle="dropdown">About</a>
+            <ul class="dropdown-menu bg-dark" >
+            	<li class="dropdown-item" id="submenu"><a href="about1.html" class="nav-link text-light">Know more about UDID</a></li>
+              <li class="dropdown-item" id="submenu"><a href="about2.html" class="nav-link text-light" >Schemes for Persons with Disabilities</a></li>
+              <li class="dropdown-item" id="submenu"><a href="about3.html" class="nav-link text-light">About Department of Empowerment of Persons with Disabilities</a></li>
+             
+            </ul>
+          </li>
+          <li class="nav-item"><a href="menu3.html" class="nav-link text-light">About Persons with Disabilities</a></li>
+          <li class="nav-item"><a href="menu4.html" class="nav-link text-light">UDID Card Status</a></li>
+				<li class="nav-item"><a href="menu5.html" class="nav-link text-light">Contact Us</a></li>
+			</ul>
+		</div>
+
+	<h3>Schemes for Persons with Disabilities</h3>
+	
+	<script>
+	
+	class Node {
+    // constructor
+    constructor(element) {
+        this.element = element;
+        this.next = null
+    }
+}
+// linkedlist class
+class LinkedList {
+    constructor() {
+        this.head = null;
+        this.size = 0;
+    }
+ 
+    // adds an element at the end
+    // of list
+    add(element) {
+        // creates a new node
+        var node = new Node(element);
+ 
+        // to store current node
+        var current;
+ 
+        // if list is Empty add the
+        // element and make it head
+        if (this.head == null)
+            this.head = node;
+        else {
+            current = this.head;
+ 
+            // iterate to the end of the
+            // list
+            while (current.next) {
+                current = current.next;
+            }
+ 
+            // add node
+            current.next = node;
+        }
+        this.size++;
+    }
+ 
+ 
+ 
+    // finds the index of element
+    indexOf(element) {
+        var count = 1;
+        var current = this.head;
+ 
+        // iterate over the list
+        while (current != null) {
+            // compare each element of the list
+            // with given element
+            if (current.element === element)
+                return count;
+            count++;
+            current = current.next;
+        }
+ 
+        // not found
+        return -1;
+    }
+ 
+    
+ 
+    // gives the size of the list
+    size_of_list() {
+        document.write(this.size);
+    }
+ 
+ 
+    // prints the list items
+    printList() {
+        var curr = this.head;
+        var str = "" ;
+        while (curr) {
+            str += curr.element + "<br> ";
+            curr = curr.next;
+        }
+        document.write(str);
+    }
+ 
+}
+ 
+// creating an object for the
+// Linkedlist class
+var ll = new LinkedList();
+ 
+
+// adding element to the list
+document.write( "Index of availble schemes are given as follows :"+"<br>")
+ll.add("SHA - Early Intervention and School Readiness Scheme ");
+document.write(" Index of SHA "+"<b>" +"<a href='#scheme1'>"+ ll.indexOf("SHA - Early Intervention and School Readiness Scheme ")+"</a>"+"<br>"+"</b>");
+  
+// adding more elements to the list
+ll.add("VIKAAS for autism, cerebral palsy, mental retardation and multiple disabilities");
+document.write(" Index of VIKAAS " +"<b>"+ ll.indexOf("VIKAAS for autism, cerebral palsy, mental retardation and multiple disabilities")+"<br>"+"</b>");
+ll.add("SAMARTH - Respite Care");
+document.write(" Index of SAMARTH "+"<b>" + ll.indexOf("SAMARTH - Respite Care")+"<br>"+"</b>");
+ll.add("GHARAUNDA - provides housing and care services");
+document.write(" Index of GHARAUNDA "+"<b>" + ll.indexOf("GHARAUNDA - provides housing and care services")+"<br>"+"</b>");
+ll.add("NIRAMAYA - Health Insurance Scheme ");
+document.write(" Index of NIRAMAYA "+"<b>" + ll.indexOf("NIRAMAYA - Health Insurance Scheme ")+"<br>"+"</b>");
+
+ll.add("SAHYOGI - Caregiver training scheme");
+document.write(" Index of SAHYOGI "+"<b>"+ ll.indexOf("SAHYOGI - Caregiver training scheme")+"<br>"+"</b>");
+
+ll.add("DISHA - Early Intervention and School Readiness Scheme");
+document.write(" Index of DISHA "+"<b>" + ll.indexOf("DISHA - Early Intervention and School Readiness Scheme")+"<br>"+"</b>");
+
+
+// ll.add("PRABHA");
+// document.write(" Index of PRABHA "+"<b>" + ll.indexOf("PRABHA")+"<br>"+"</b>");
+
+ll.add("PRERNA - Marketing Assistance ");
+document.write(" Index of PRERNA "+"<b>" + ll.indexOf("PRERNA - Marketing Assistance ")+"<br>"+"</b>");
+
+
+ll.add("SAMBHAV - Aids and Assistive Devices");
+document.write(" Index of SAMBHAV "+"<b>" + ll.indexOf("SAMBHAV - Aids and Assistive Devices")+"<br>"+"</b>");
+
+document.write(" The total number of schemes: ")
+ll.size_of_list();
+document.write("<br>")
+
+ document.write(" List of schemes :"+"<br>")
+ ll.printList();
+ document.write("<br>")
+
+	
+</script>
+
+	
+	<ol>
+		<li id="scheme1">
+	SHA - Early Intervention and School Readiness Scheme - This is an early intervention and school readiness scheme for children upto 10 years with the disabilities covered under the National Trust Act.<a href="https://vikaspedia.in/social-welfare/differently-abled-welfare/schemes-programmes/schemes-of-the-national-trust/disha#:~:text=This%20is%20an%20early%20intervention%20and%20school%20readiness,readiness%29%20and%20counselling%20to%20both%20children%20and%20parents."> Click here</a> to know more about scheme
+</li>
+<li>
+VIKAAS - Day Care - A day care scheme for persons with autism, cerebral palsy, mental retardation and multiple disabilities, above 10 years for enhancing interpersonal and vocational skills.<a href="https://thenationaltrust.gov.in/content/scheme/vikaas.php"> Click here</a> to know more about scheme
+</li>
+<li>
+SAMARTH - Respite Care - TA scheme to provide respite home for orphans, families in crisis, Persons with Disabilities (PwD) from BPL, LIG families with at least one of the four disabilities covered under the National Trust Act.
+<a href="https://thenationaltrust.gov.in/content/scheme/samarth.php"> Click here</a> to know more about scheme
+</li>
+<li>
+GHARAUNDA - Group Home for Adults - This scheme provides housing and care services throughout the life of the person with Autism, Cerebral Palsy, Mental Retardation and Multiple Disabilities.
+<a href="https://thenationaltrust.gov.in/content/scheme/gharaunda.php"> Click here</a> to know more about scheme
+</li>
+<li>
+NIRAMAYA - Health Insurance Scheme - This scheme is to provide affordable Health Insurance to persons with Autism, Cerebral Palsy, Mental Retardation and Multiple Disabilities.
+<a href="https://thenationaltrust.gov.in/content/scheme/niramaya.php"> Click here</a> to know more about scheme
+</li>
+<li>
+SAHYOGI - Caregiver training scheme - A scheme  to set up Caregiver Cells (CGCs) for training and creating skilled workforce of caregivers to care for Person with Disabilities (PwD) and their families.
+<a href="https://thenationaltrust.gov.in/content/scheme/sahyogi.php"> Click here</a> to know more about scheme
+</li>
+<li>
+DISHA - Early Intervention and School Readiness Scheme-This scheme aims at setting up Disha Centres for early intervention for Person with Disability (PwD) in 0-10 years of age covered under the National Trust Act, through therapies, trainings and providing support to family members. Registered Organization (RO) should provide following minimum facilities in their Disha Centre:
+<a href="https://thenationaltrust.gov.in/content/scheme/disha.php"> Click here</a> to know more about scheme
+</li>
+<li>
+PRERNA - Marketing Assistance - A marketing scheme to create viable & wide spread channels for sale of products and services produced by persons with autism, cerebral palsy, mental retardation and multiple disabilities.
+<a href="https://thenationaltrust.gov.in/content/scheme/prerna.php"> Click here</a> to know more about scheme
+</li>
+<li>
+SAMBHAV - Aids and Assistive Devices - This is a scheme to setup additional resource centres in each city, to collate and collect the Aids, software and other form of assistive devices.
+<a href="https://thenationaltrust.gov.in/content/scheme/sambhav.php"> Click here</a> to know more about scheme
+</li>
+</ol>
+<br>
+<div class="container-fluid bg-dark">
+	<div class="row">
+		<div class="col-md-4">
+			<h4  class="text-light">About</h4>
+				
+					<li><a href="#" class="text-light">Know more about UDID</a></li>
+					<li><a href="#"  class="text-light">Schemes for Persons with Disabilities</a></li>
+					<li><a href="#"  class="text-light">Disabilities Schemes</a></li>
+					<li><a href="#"  class="text-light">Medical Camps / Hospitals</a></li>
+					<li><a href="#"  class="text-light">District Welfare Office</a></li>
+			
+		</div>
+		<div class="col-md-4">
+			<h4  class="text-light">Access</h4>
+				
+					<li><a href="#" class="text-light">Terms & Conditions</a></li>
+					<li><a href="#"  class="text-light">Privacy Policy</a></li>
+					<li><a href="#"  class="text-light">Copyright Policy</a></li>
+					<li><a href="#"  class="text-light">Hyperlinking Policy</a></li>
+					<li><a href="#"  class="text-light">Accessibility Statement</a></li>
+	</div>
+	<div class="col-md-4">
+			<h4  class="text-light">Connect with Us</h4>
+			<br>
+			<div class="social-links">
+        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
+        <a href="https://www.linkedin.com/in/shruti-tagade-4a6668253" class="linkedin"><i class="bi-linkedin"></i></a>
+        <br><br>
+		<div class="copyright text-light">
+        &copy; Copyright <strong><span>MyProject</span></strong>. All Rights Reserved
+      </div>
+      </div>
+      
+		</div>
+		
+
+</div>
+</div>
+
+</body>
+</html>
