@@ -97,27 +97,7 @@ class LinkedList {
         this.size++;
     }
  
- 
- 
-    // finds the index of element
-    indexOf(element) {
-        var count = 1;
-        var current = this.head;
- 
-        // iterate over the list
-        while (current != null) {
-            // compare each element of the list
-            // with given element
-            if (current.element === element)
-                return count;
-            count++;
-            current = current.next;
-        }
- 
-        // not found
-        return -1;
-    }
- 
+
     
  
     // gives the size of the list
@@ -145,99 +125,38 @@ var ll = new LinkedList();
  
 
 // adding element to the list
-ll.add("VIKAAS for autism, cerebral palsy, mental retardation and multiple disabilities");
-ll.add("SAMARTH - Respite Care");
-ll.add("GHARAUNDA - provides housing and care services");
-ll.add("NIRAMAYA - Health Insurance Scheme ");
-ll.add("SAHYOGI - Caregiver training scheme");
-ll.add("DISHA - Early Intervention and School Readiness Scheme");
-ll.add("PRERNA - Marketing Assistance ");
-ll.add("BADHTE KADAM - Awareness, Community Interaction");
-ll.add("SAMBHAV - Aids and Assistive Devices");
+ll.add("1. VIKAAS - Day Care - A day care scheme for persons with autism, cerebral palsy, mental retardation and multiple disabilities, above 10 years for enhancing interpersonal and vocational skills.<a href='https://thenationaltrust.gov.in/content/scheme/vikaas.php'> Click here </a>to know more about scheme");
 
+ll.add("2. SAMARTH - Respite Care - TA scheme to provide respite home for orphans, families in crisis, Persons with Disabilities (PwD) from BPL, LIG families with at least one of the four disabilities covered under the National Trust Act.<a href='https://thenationaltrust.gov.in/content/scheme/samarth.php'> Click here</a> to know more about scheme");
+
+ll.add("3. GHARAUNDA - Group Home for Adults - This scheme provides housing and care services throughout the life of the person with Autism, Cerebral Palsy, Mental Retardation and Multiple Disabilities.<a href='https://thenationaltrust.gov.in/content/scheme/gharaunda.php'> Click here</a> to know more about scheme");
+
+ll.add("5. NIRAMAYA - Health Insurance Scheme - This scheme is to provide affordable Health Insurance to persons with Autism, Cerebral Palsy, Mental Retardation and Multiple Disabilities.<a href='https://thenationaltrust.gov.in/content/scheme/niramaya.php'> Click here</a> to know more about scheme");
+
+ll.add("6. SAHYOGI - Caregiver training scheme - A scheme  to set up Caregiver Cells (CGCs) for training and creating skilled workforce of caregivers to care for Person with Disabilities (PwD) and their families.<a href='https:/thenationaltrust.gov.in/content/scheme/sahyogi.php'> Click here</a> to know more about scheme");
+
+ll.add("7. DISHA - Early Intervention and School Readiness Scheme-This scheme aims at setting up Disha Centres for early intervention for Person with Disability (PwD) in 0-10 years of age covered under the National Trust Act, through therapies, trainings and providing support to family members. Registered Organization (RO) should provide following minimum facilities in their Disha Centre:<a href='https://thenationaltrust.gov.in/content/scheme/disha.php'> Click here</a> to know more about scheme");
+
+ll.add("8. PRERNA - Marketing Assistance - A marketing scheme to create viable & wide spread channels for sale of products and services produced by persons with autism, cerebral palsy, mental retardation and multiple disabilities.<a href='https://thenationaltrust.gov.in/content/scheme/prerna.php'> Click here</a> to know more about scheme");
+ll.add("<a href='https://thenationaltrust.gov.in/content/scheme/badhte-kadam.php'> Click here</a> to know more about scheme");
+
+ll.add("9. SAMBHAV - Aids and Assistive Devices - This is a scheme to setup additional resource centres in each city, to collate and collect the Aids, software and other form of assistive devices.<a href='https://thenationaltrust.gov.in/content/scheme/sambhav.php'> Click here</a> to know more about scheme");
 
 document.write(" The total number of schemes: ");
 
-
 ll.size_of_list();
 
-document.write("<br>")
+document.write("<br>");
 
+document.write(" List of schemes :"+"<br>");
 
- document.write(" List of schemes :"+"<br>");
-
- ll.printList();
-
- document.write("<br>");
-
-
-document.write( "Index of available schemes are given as follows :"+"<br>")
-
-document.write(" Index of VIKAAS " +"<b>"+"<a href='#scheme1'>"+ ll.indexOf("VIKAAS for autism, cerebral palsy, mental retardation and multiple disabilities")+"</a>"+"<br>"+"</b>");
-
-document.write(" Index of SAMARTH "+"<b>" + ll.indexOf("SAMARTH - Respite Care")+"<br>"+"</b>");
-
-document.write(" Index of GHARAUNDA "+"<b>" + ll.indexOf("GHARAUNDA - provides housing and care services")+"<br>"+"</b>");
-
-document.write(" Index of NIRAMAYA "+"<b>" + ll.indexOf("NIRAMAYA - Health Insurance Scheme ")+"<br>"+"</b>");
-
-document.write(" Index of SAHYOGI "+"<b>"+ ll.indexOf("SAHYOGI - Caregiver training scheme")+"<br>"+"</b>");
-
-document.write(" Index of DISHA "+"<b>" + ll.indexOf("DISHA - Early Intervention and School Readiness Scheme")+"<br>"+"</b>");
-
-
-document.write(" Index of PRERNA "+"<b>" + ll.indexOf("PRERNA - Marketing Assistance ")+"<br>"+"</b>");
-
-document.write(" Index of BADHTE KADAM  "+"<b>" + ll.indexOf("BADHTE KADAM - Awareness, Community Interaction")+"<br>"+"</b>");
-
-document.write(" Index of SAMBHAV "+"<b>" + ll.indexOf("SAMBHAV - Aids and Assistive Devices")+"<br>"+"</b>");
-
-
-document.write("<br>")
+ll.printList();
 
 	
 </script>
 
 	
-	<ol>
-		
-</li>
-<li id="scheme1">
-VIKAAS - Day Care - A day care scheme for persons with autism, cerebral palsy, mental retardation and multiple disabilities, above 10 years for enhancing interpersonal and vocational skills.<a href="https://thenationaltrust.gov.in/content/scheme/vikaas.php"> Click here</a> to know more about scheme
-</li>
-<li>
-SAMARTH - Respite Care - TA scheme to provide respite home for orphans, families in crisis, Persons with Disabilities (PwD) from BPL, LIG families with at least one of the four disabilities covered under the National Trust Act.
-<a href="https://thenationaltrust.gov.in/content/scheme/samarth.php"> Click here</a> to know more about scheme
-</li>
-<li>
-GHARAUNDA - Group Home for Adults - This scheme provides housing and care services throughout the life of the person with Autism, Cerebral Palsy, Mental Retardation and Multiple Disabilities.
-<a href="https://thenationaltrust.gov.in/content/scheme/gharaunda.php"> Click here</a> to know more about scheme
-</li>
-<li>
-NIRAMAYA - Health Insurance Scheme - This scheme is to provide affordable Health Insurance to persons with Autism, Cerebral Palsy, Mental Retardation and Multiple Disabilities.
-<a href="https://thenationaltrust.gov.in/content/scheme/niramaya.php"> Click here</a> to know more about scheme
-</li>
-<li>
-SAHYOGI - Caregiver training scheme - A scheme  to set up Caregiver Cells (CGCs) for training and creating skilled workforce of caregivers to care for Person with Disabilities (PwD) and their families.
-<a href="https://thenationaltrust.gov.in/content/scheme/sahyogi.php"> Click here</a> to know more about scheme
-</li>
-<li>
-DISHA - Early Intervention and School Readiness Scheme-This scheme aims at setting up Disha Centres for early intervention for Person with Disability (PwD) in 0-10 years of age covered under the National Trust Act, through therapies, trainings and providing support to family members. Registered Organization (RO) should provide following minimum facilities in their Disha Centre:
-<a href="https://thenationaltrust.gov.in/content/scheme/disha.php"> Click here</a> to know more about scheme
-</li>
-<li>
-PRERNA - Marketing Assistance - A marketing scheme to create viable & wide spread channels for sale of products and services produced by persons with autism, cerebral palsy, mental retardation and multiple disabilities.
-<a href="https://thenationaltrust.gov.in/content/scheme/prerna.php"> Click here</a> to know more about scheme
-</li>
-<li>
-BADHTE KADAM - Badhte Kadam aims at community awareness, sensitisation, social integration and mainstreaming of Persons with Disabilities.
-<a href="https://thenationaltrust.gov.in/content/scheme/badhte-kadam.php"> Click here</a> to know more about scheme
-</li>
-<li>
-SAMBHAV - Aids and Assistive Devices - This is a scheme to setup additional resource centres in each city, to collate and collect the Aids, software and other form of assistive devices.
-<a href="https://thenationaltrust.gov.in/content/scheme/sambhav.php"> Click here</a> to know more about scheme
-</li>
-</ol>
+	
 <br>
 <div class="container-fluid bg-dark">
 	<div class="row">
